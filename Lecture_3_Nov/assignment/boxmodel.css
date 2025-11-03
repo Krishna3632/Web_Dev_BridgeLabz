@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Flexbox container for centering */
+.box-model-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+}
+
+/* --- Visual Breakdown Styles --- */
+.visual-demo {
+    font-weight: bold;
+    color: #333;
+}
+
+.margin {
+    background: rgba(231, 76, 60, 0.3); /* Transparent red for margin */
+    padding: 20px; /* Using padding to simulate margin's space */
+    text-align: center;
+    border: 2px dashed #c0392b;
+}
+
+.border {
+    border: 15px solid rgba(241, 196, 15, 0.7); /* Yellow for border */
+    background: transparent;
+    padding: 5px; /* Just for text */
+}
+
+.padding {
+    background: rgba(46, 204, 113, 0.5); /* Green for padding */
+    padding: 30px; /* This is the actual padding */
+}
+
+.content {
+    background: #3498db; /* Blue for content */
+    padding: 40px 20px;
+    color: white;
+    height: 100px;
+}
+
+/* --- Box-Sizing Comparison Styles --- */
+.demo-item {
+    text-align: center;
+}
+
+.box-viz {
+    /* Both boxes get the *same* styles */
+    width: 250px;
+    height: 150px;
+    padding: 20px;
+    border: 10px solid #e74c3c;
+    background: #3498db;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* This is the default, but we set it explicitly for clarity */
+.content-box {
+    box-sizing: content-box;
+}
+
+/* This is the only difference */
+.border-box {
+    box-sizing: border-box;
+}

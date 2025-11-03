@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-R">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outline and Focus Styling</title>
+    <link rel="stylesheet" href="outline.css">
+</head>
+<body>
+    <form class="focus-form">
+        <h2>Contact Us</h2>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Click me to see focus">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email (Dashed Outline):</label>
+            <input type="text" id="email" class="dashed-focus" placeholder="Dashed outline on focus">
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" rows="5" placeholder="Textarea with outline-offset"></textarea>
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

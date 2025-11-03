@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.selector-demo {
+    max-width: 700px;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* --- Attribute Selectors --- */
+
+/* Selects <input> elements with a type attribute equal to "text" */
+input[type="text"] {
+    border: 2px solid #3498db;
+}
+
+/* Selects <a> elements whose href attribute begins with "https" */
+a[href^="https"] {
+    color: green;
+    font-weight: bold;
+}
+
+/* --- Pseudo-Classes --- */
+
+/* Selects an element when the user hovers over it */
+li:hover {
+    background-color: #eee;
+}
+
+/* Selects an input element when it is focused */
+input:focus {
+    background-color: #lightyellow;
+    outline: 2px solid #3498db;
+}
+
+/* Selects every odd-numbered <li> child of a <ul> */
+ul > li:nth-child(odd) {
+    color: #555;
+    font-style: italic;
+}
+
+/* --- Pseudo-Elements --- */
+
+/* Inserts content before every list item */
+ul > li::before {
+    content: "► ";
+    color: #3498db;
+}
+
+/* Inserts content after links that go to google.com */
+a[href*="google.com"]::after {
+    content: " (Google)";
+    font-size: 0.8em;
+    color: #999;
+}
+
+/* --- Combinators --- */
+
+/* 1. Descendant Combinator (space) */
+/* Selects all <li> elements inside .selector-demo */
+.selector-demo li {
+    margin-bottom: 5px;
+}
+
+/* 2. Child Combinator (>) */
+/* Selects only <p> elements that are *direct children* of .selector-demo */
+.selector-demo > p {
+    font-weight: bold;
+    color: #d9534f;
+}
+
+/* 3. Adjacent Sibling Combinator (+) */
+/* Selects the *first* <p> element that immediately follows an <hr> */
+hr + h3 {
+    color: #0275d8;
+    margin-top: 20px;
+}
+
+/* 4. General Sibling Combinator (~) */
+/* Selects *all* <p> elements that follow an <hr> */
+hr ~ p {
+    background-color: #f0f8ff;
+    padding: 5px;
+}

@@ -1,0 +1,92 @@
+body {
+    background-color: #fdfdfd;
+    color: #333;
+    /* Base font settings for the whole page */
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+}
+
+.typography-article {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* --- Headings --- */
+h1, h2 {
+    /* Sans-serif for headings creates good contrast */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Bold weight */
+    color: #2c3e50;
+    letter-spacing: -0.5px; /* Slightly tighter spacing */
+}
+
+h1 {
+    font-size: 2.5rem; /* 2.5 times the root font size */
+    text-align: center; /* Centered heading */
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+}
+
+/* --- Paragraphs & Spacing --- */
+p {
+    font-size: 1.1rem;
+    line-height: 1.7; /* Generous line height for readability */
+    letter-spacing: 0.2px; /* Slight spacing for clarity */
+    text-align: justify; /* Aligns text to both left and right */
+    margin-bottom: 20px;
+}
+
+/* --- Custom Inline Element Styling --- */
+strong {
+    font-weight: 700; /* default is 'bold', 700 is more specific */
+    color: #c0392b; /* Custom red color */
+}
+
+em {
+    font-style: italic;
+    color: #2980b9; /* Custom blue color */
+}
+
+mark {
+    background-color: #f1c40f;
+    color: #333;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+code {
+    font-family: monospace;
+    background: #ecf0f1;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+/* --- Pseudo-Elements --- */
+
+/* Style the first letter of the .intro paragraph */
+.intro::first-letter {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: #34495e;
+    float: left;
+    margin-right: 8px;
+    line-height: 1;
+}
+
+/* Style the first line of every paragraph */
+.typography-article p::first-line {
+    /* This effect is subtle, e.g., small-caps */
+    /* font-variant: small-caps; */
+    font-weight: 600; /* Make the first line slightly bolder */
+}

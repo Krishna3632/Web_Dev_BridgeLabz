@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.transform-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px 20px; /* Extra padding to see transformations */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.transform-wrapper {
+    text-align: center;
+}
+
+.transform-box {
+    width: 150px;
+    height: 150px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Transition applied to all transform properties */
+    transition: all 0.4s ease;
+}
+
+.transform-wrapper p {
+    font-family: monospace;
+    font-weight: bold;
+    color: #555;
+}
+
+/* --- Hover Transformations --- */
+
+.rotate:hover {
+    transform: rotate(45deg);
+    background-color: #e74c3c;
+}
+
+.scale:hover {
+    transform: scale(1.2);
+    background-color: #2ecc71;
+}
+
+.translate:hover {
+    transform: translate(20px, -20px);
+    background-color: #f1c40f;
+}
+
+.skew:hover {
+    transform: skew(15deg, 10deg);
+    background-color: #9b59b6;
+}
