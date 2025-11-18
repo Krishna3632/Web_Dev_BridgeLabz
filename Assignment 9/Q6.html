@@ -1,0 +1,22 @@
+
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>Q6 — Responsive CSS Cheat Sheet</title>
+<style>
+  :root{{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial}}
+  body{{margin:20px}}
+  .grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}}
+  .box{{padding:16px;border-radius:10px;background:#fff;border:1px solid #eee;transition:transform .2s,background .2s}}
+  .box:hover{{transform:translateY(-6px);background:linear-gradient(135deg,#fef9c3,#ffd7a8)}}
+  @media (max-width:1100px){{ .grid{{grid-template-columns:repeat(2,1fr)}} }}
+  @media (max-width:700px){{ .grid{{grid-template-columns:1fr}} .box{{display:block}} }}
+</style></head><body>
+<h1>Responsive CSS Cheat Sheet</h1>
+<div class="grid">
+  <div class="box"><h3>Filters</h3><p>Use <code>filter: grayscale(100%)</code> or <code>blur(2px)</code>.</p></div>
+  <div class="box"><h3>Media Queries</h3><p>Example: <code>@media (max-width: 900px) { ... }</code></p></div>
+  <div class="box"><h3>Responsive Design</h3><p>Combine flexible grids, images, and breakpoints.</p></div>
+  <div class="box"><h3>Typography</h3><p>Use relative units and <code>clamp()</code> for scalable text.</p></div>
+  <div class="box"><h3>Flexbox</h3><p>Align and distribute space using <code>display:flex</code>.</p></div>
+  <div class="box"><h3>Grid</h3><p>Powerful two-dimensional layout with <code>grid-template-columns</code>.</p></div>
+</div>
+</body></html>

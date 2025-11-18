@@ -1,0 +1,28 @@
+
+<!doctype html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>Q8 — Filter Comparison</title>
+<style>
+  :root{{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial}}
+  .compare{{display:flex;gap:12px;align-items:flex-start}}
+  .col{{flex:1;text-align:center}}
+  .col img{{width:100%;height:260px;object-fit:cover;transition:filter .4s ease}}
+  .right img{{filter:contrast(70%) brightness(.85)}}
+  .right:hover img{{filter:none}}
+
+  @media (max-width:700px){{ .compare{{flex-direction:column}} .col img{{height:220px}} }}
+</style></head><body>
+<h1>Filter Comparison</h1>
+<div class="compare">
+  <div class="col left"><figure><img src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;
+  &lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;#ddd&quot;/&gt;
+  &lt;text x=&quot;50%&quot; y=&quot;50%&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot; font-family=&quot;Arial&quot; font-size=&quot;36&quot; fill=&quot;#666&quot;&gt;
+    Original
+  &lt;/text&gt;
+&lt;/svg&gt;" alt=""><figcaption>Original</figcaption></figure></div>
+  <div class="col right"><figure><img src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;
+  &lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;#ddd&quot;/&gt;
+  &lt;text x=&quot;50%&quot; y=&quot;50%&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot; font-family=&quot;Arial&quot; font-size=&quot;36&quot; fill=&quot;#666&quot;&gt;
+    Filtered
+  &lt;/text&gt;
+&lt;/svg&gt;" alt=""><figcaption>Filtered (hover to remove)</figcaption></figure></div>
+</div>
+</body></html>
