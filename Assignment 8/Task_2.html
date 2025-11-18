@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Task 2 - Tooltip Demonstration</title>
+<style>
+:root{--bg:#f3f4f6;--card:#fff;--tooltip-bg:rgba(20,20,20,0.92);--gap:20px;}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);height:100vh;display:flex;align-items:center;justify-content:center;}
+.container{display:flex;gap:var(--gap);align-items:center;justify-content:center;flex-wrap:wrap;}
+.example{position:relative;background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:center;width:200px;}
+.target{cursor:pointer;display:inline-block;padding:8px 10px;border-radius:6px;background:#eef2ff;}
+.tooltip{position:absolute;left:50%;transform:translateX(-50%) translateY(8px);bottom:100%;margin-bottom:12px;background:var(--tooltip-bg);color:#fff;padding:8px 10px;border-radius:8px;white-space:nowrap;opacity:0;visibility:hidden;transition:opacity 0.3s ease-in-out, transform 0.3s ease-in-out;pointer-events:none;z-index:10;}
+.tooltip::after{content:'';position:absolute;left:50%;transform:translateX(-50%);top:100%;border-width:6px;border-style:solid;border-color:var(--tooltip-bg) transparent transparent transparent;}
+.example:hover .tooltip,.example:focus-within .tooltip{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);pointer-events:auto;}
+.focusable{outline:none;}
+.focusable:focus{box-shadow:0 0 0 4px rgba(99,102,241,0.12);border-radius:6px;}
+@media (max-width:600px){.container{flex-direction:column;}}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="example" tabindex="0">
+      <div class="target"><span class="focusable" tabindex="0">💡</span></div>
+      <div class="tooltip">Helpful tip about the idea.</div>
+    </div>
+
+    <div class="example">
+      <div class="target"><span class="focusable" tabindex="0">Hover me</span></div>
+      <div class="tooltip">Extra info shown on hover.</div>
+    </div>
+
+    <div class="example">
+      <div class="target"><button class="focusable" tabindex="0">Save</button></div>
+      <div class="tooltip">Saves your work.</div>
+    </div>
+  </div>
+</body>
+</html>

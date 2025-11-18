@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Task 8 - Box Sizing</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:0;display:flex;align-items:center;justify-content:center;height:100vh;background:#f7fafc;}
+.wrap{display:flex;gap:24px;align-items:center;}
+.box{width:260px;padding:20px;border:5px solid rgba(16,24,40,0.06);border-radius:8px;background:#fff;}
+.default{box-sizing:content-box;background:#fff8f0;}
+.border-box{box-sizing:border-box;background:#f0fff4;}
+.caption{max-width:240px;font-size:14px;color:#333;margin-top:10px;}
+@media(max-width:700px){.wrap{flex-direction:column;}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="box default">
+      <strong>Default (content-box)</strong>
+      <div class="caption">Width set to 260px, padding and border are added outside content box, increasing total size.</div>
+    </div>
+    <div class="box border-box" style="box-sizing:border-box;">
+      <strong>Border-box</strong>
+      <div class="caption">Width set to 260px includes padding and border, so total width stays 260px.</div>
+    </div>
+  </div>
+</body>
+</html>

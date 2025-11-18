@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Task 10 - Mini UI</title>
+<style>
+*{box-sizing:border-box;}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#eef2ff,#fff);display:flex;align-items:center;justify-content:center;height:100vh;padding:20px;}
+.wrapper{width:100%;max-width:860px;}
+header,footer{background:#fff;padding:12px;border-radius:8px;box-shadow:0 8px 24px rgba(2,6,23,0.06);margin-bottom:12px;}
+.main{display:flex;gap:16px;background:#fff;padding:16px;border-radius:12px;box-shadow:0 12px 40px rgba(2,6,23,0.06);align-items:flex-start;}
+.form{flex:1;display:flex;flex-direction:column;gap:10px;}
+.form input, .form textarea{padding:10px;border:1px solid #e6e9ef;border-radius:8px;}
+.sidebar{width:200px;text-align:center;}
+button{padding:10px;border-radius:8px;border:none;background:#2563eb;color:#fff;cursor:pointer;}
+button:hover{transform:translateY(-2px);}
+@media(max-width:700px){.main{flex-direction:column;} .sidebar{width:100%;}}
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <header><h2 style="margin:0">Mini UI Header</h2></header>
+    <main class="main">
+      <div class="form">
+        <input placeholder="Name">
+        <input placeholder="Email">
+        <textarea rows="4" placeholder="Message"></textarea>
+        <div style="display:flex;gap:8px;"><button>Submit</button><button style="background:#e5e7eb;color:#111">Cancel</button></div>
+      </div>
+      <aside class="sidebar">
+        <img src="https://picsum.photos/seed/pic/120/120" alt="" style="border-radius:8px;margin-bottom:8px;">
+        <div>Small image</div>
+      </aside>
+    </main>
+    <footer><small>Footer info</small></footer>
+  </div>
+</body>
+</html>

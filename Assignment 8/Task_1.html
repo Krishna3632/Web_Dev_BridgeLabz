@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo-Classes Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .box {
+      background: #fff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Link hover example */
+    a {
+      text-decoration: none;
+      color: blue;
+      font-weight: bold;
+    }
+    a:hover {
+      color: red;
+    }
+
+    /* Button focus and active examples */
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:focus {
+      outline: 2px solid orange;
+    }
+    button:active {
+      background-color: #0056b3;
+    }
+
+    /* List nth-child example */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      padding: 8px;
+      background-color: #eee;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+    ul li:nth-child(even) {
+      background-color: #d3e0ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pseudo-Classes Demonstration</h1>
+
+  <div class="container">
+    <!-- Hover Example -->
+    <div class="box">
+      <h3>:hover</h3>
+      <p>Changes color when you hover over the link.</p>
+      <a href="#">Hover over me!</a>
+    </div>
+
+    <!-- Focus and Active Example -->
+    <div class="box">
+      <h3>:focus & :active</h3>
+      <p>:focus is shown when button is selected.<br>:active is shown when pressed.</p>
+      <button>Click or Focus Me</button>
+    </div>
+
+    <!-- nth-child Example -->
+    <div class="box">
+      <h3>:nth-child()</h3>
+      <p>Applies styles to every even list item.</p>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
