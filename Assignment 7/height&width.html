@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Height & Width Practice</title>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #eef;
+  gap: 15px;
+}
+.box {
+  background: lightcoral;
+  color: white;
+  text-align: center;
+  overflow: auto;
+  border-radius: 8px;
+}
+.box1 {
+  width: 200px; height: 100px;
+}
+.box2 {
+  width: 30%; min-height: 150px; background: teal;
+}
+.box3 {
+  width: 15em; height: 20vh; background: goldenrod; max-width: 250px;
+}
+</style>
+</head>
+<body>
+  <div class="box box1">200px x 100px</div>
+  <div class="box box2">30% width</div>
+  <div class="box box3">15em width, 20vh height</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gradient Background</title>
+<style>
+body, html {
+  margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+}
+header, footer {
+  background: #222; color: white; text-align: center;
+  padding: 15px; position: fixed; width: 100%;
+}
+header { top: 0; }
+footer { bottom: 0; }
+.section {
+  height: 100vh;
+  display: flex; justify-content: center; align-items: center;
+  color: white; font-size: 1.5em;
+}
+.linear {
+  background: linear-gradient(135deg, #ff6b6b, #5f27cd);
+}
+.radial {
+  background: radial-gradient(circle, #1dd1a1, #10ac84);
+  background-attachment: fixed;
+}
+</style>
+</head>
+<body>
+<header>Fixed Header</header>
+<section class="section linear">Linear Gradient Section</section>
+<section class="section radial">Radial Gradient Section (Fixed Background)</section>
+<footer>Fixed Footer</footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Bar</title>
+<style>
+body {
+  margin: 0; font-family: sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background: #333;
+  flex-wrap: wrap;
+}
+nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+nav a:hover {
+  background: #555;
+}
+nav a.active {
+  background: #007bff;
+}
+footer {
+  text-align: center; padding: 15px; background: #222; color: white;
+}
+@media (max-width: 700px) {
+  nav { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+  <nav>
+    <a href="#" class="active">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Contact</a>
+  </nav>
+  <footer>© 2025 My Website</footer>
+</body>
+</html>

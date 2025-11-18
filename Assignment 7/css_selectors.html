@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced CSS Selectors</title>
+<style>
+/* Attribute selectors */
+input[type="text"] { border: 2px solid blue; }
+/* href starts with https */
+a[href^="https"] { color: green; }
+/* Pseudo-classes */
+li:hover { background: lightblue; }
+input:focus { border-color: red; }
+/* nth-child */
+li:nth-child(even) { background: #f0f0f0; }
+/* Pseudo-elements */
+li::before { content: "👉 "; }
+/* Combinators */
+div > p { color: purple; }  /* child */
+h2 + p { font-style: italic; }  /* adjacent sibling */
+p ~ span { color: orange; }  /* general sibling */
+</style>
+</head>
+<body>
+  <h2>Advanced Selectors</h2>
+  <p>This is directly after an h2.</p>
+  <div>
+    <p>Child paragraph inside div</p>
+    <span>Sibling span</span>
+  </div>
+  <ul>
+    <li>First Item</li>
+    <li>Second Item</li>
+    <li>Third Item</li>
+  </ul>
+  <a href="https://example.com">Secure Link</a><br>
+  <input type="text" placeholder="Focus me">
+</body>
+</html>
