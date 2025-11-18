@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Task 4 - Selectors Practice</title>
+<style>
+/* Element selector: style all paragraphs */
+p { color:#111; line-height:1.5; }
+/* Class selector: special note box */
+.note { background:#eef; padding:10px; border-radius:6px; }
+/* ID selector: unique header */
+#mainTitle { font-size:20px; margin-bottom:10px; }
+/* Attribute selector: style links that have target='_blank' */
+a[target='_blank']{ text-decoration:underline dotted; }
+/* Child combinator: direct child li of .menu */
+.menu > li { font-weight:700; }
+/* Adjacent sibling: style paragraph immediately after h2 */
+h2 + p { margin-top:6px; color:#444; }
+/* General sibling: style any p after .intro */
+.intro ~ p { color:#666; }
+/* Descendant selector */
+nav a { color:#0b5; text-decoration:none; }
+.container{max-width:900px;margin:40px auto;padding:20px;}
+footer{margin-top:24px;color:#666;font-size:14px;}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header><h1 id="mainTitle">CSS Selectors Practice</h1></header>
+    <nav><a href="#">Home</a> | <a href="#">Docs</a></nav>
+    <section>
+      <h2>Element selector example</h2>
+      <p>This paragraph shows the element selector styling.</p>
+
+      <h2>Class selector example</h2>
+      <div class="note">This box uses a class selector (.note).</div>
+
+      <h2>Attribute selector example</h2>
+      <p>Open <a href="#" target="_blank">this link</a> in a new tab to see attribute selector effect.</p>
+
+      <h2>Combinators</h2>
+      <ul class="menu">
+        <li>Direct child one</li>
+        <li>Direct child two</li>
+      </ul>
+      <div class="intro">Intro block</div>
+      <p>Paragraph after intro (general sibling).</p>
+      <p>Another paragraph (descendant examples).</p>
+    </section>
+    <footer>Footer content — practice selectors</footer>
+  </div>
+</body>
+</html>
