@@ -1,0 +1,17 @@
+body[data-theme="light"] {
+    background: white;
+    color: black;
+}
+body[data-theme="dark"] {
+    background: #222;
+    color: white;
+}
+body[data-theme="blue"] {
+    background: #cde7ff;
+    color: #003366;
+}
+
+button {
+    margin: 10px;
+    padding: 8px 15px;
+}
